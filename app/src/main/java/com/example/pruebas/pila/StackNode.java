@@ -1,10 +1,10 @@
 package com.example.pruebas.pila;
 
 public class StackNode {
-    private int data;//dato a guradar
+    private char data;//dato a guradar
     private StackNode next; //representa el enlace
 
-     public StackNode(int data,StackNode next){
+     public StackNode(char data,StackNode next){
          this.data=data;
          this.next=next;
      }
@@ -13,7 +13,7 @@ public class StackNode {
         return next;
     }
 
-    public int getData() {
+    public char getData() {
         return data;
     }
 

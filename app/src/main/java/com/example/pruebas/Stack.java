@@ -15,7 +15,7 @@ public class Stack {
         return top;
     }
 
-    public void Push(int data){ //paga agregar valores
+    public void Push(char data){ //paga agregar valores
         StackNode node=new StackNode(data,top);
          //top=new StackNode(data,top);
         top=node;
@@ -38,10 +38,10 @@ public class Stack {
         Log.i("log",""+aux);
     }
 
-    public int Pop(/*solo si recibe parametros de otra clase*/){
+    public char Pop(/*solo si recibe parametros de otra clase*/){
         if (top.getNext()==null) { //stackUnderflow
             Log.i("log", "empty stack");
-            return -1;
+            return '0';
         }else{
                 StackNode aux = top;
                 top = top.getNext();

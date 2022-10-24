@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private Stack stackList; //datos de clase stack
     private EditText etTexto;
     private Button btGuardar;
-    private StackNode top;
-    char date;
+
+
 
 
 
@@ -29,68 +29,44 @@ public class MainActivity extends AppCompatActivity {
         etTexto=findViewById(R.id.etTexto);
         btGuardar=findViewById(R.id.btButton);
       //  stack=new PilaArreglo(); //se crea/inicializa
-
-
-
         btGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stackList=new Stack();
+
                 String input=etTexto.getText().toString().trim();
                 etTexto.setText("");
                 if (input.equals(""))
                     Toast.makeText(getApplicationContext(), "Favor de ingresar un dato", Toast.LENGTH_SHORT).show();
                 else {
+                   Stack stackList=new Stack();//falto esto
 
                     for (int i = 0; i < input.length(); i++) {
-                       date= input.charAt(i);
-                       char top=date;
-                       Log.i("log","dato "+ date);
+                       stackList.Push(input.charAt(i));//aqui se guarda el dato
+                       Log.i("log","dato ");
 
                     }
-                     // stackList.printl();
+                      stackList.printl();
 
-                    String aux="";
-                    StackNode node=top;
-                    while (top!=null){
-                        aux+=node+ "-> ";
-                        node=node.getNext();
+                    String auxC="";
+                    //StackNode node= stack.getTop();
+                    //  auxC+=node.getData();
+                      //  node=node.getNext();
                     }
-                    Log.i("log",""+aux);
+
+                    //if (input.equals(auxC)){}
 
 
 
                   //  while (node=='a'){
-                        int  auxInverso= stackList.Pop();
-
-                        if (top.equals(auxInverso)){
-                            Log.i("es palindromo ","");
-                        }
-                        else {
-                            Log.i("no es palindromo","");
-                        }
-
                     //}
-
-
-
-
-
-
                    // stackList.printl();
-
-
-
-
-
-                   // stackList = new StackNode(aux, stackList);
+                    // stackList = new StackNode(aux, stackList);
                   //  stackList.Push(date);
                    //stackList.Push(aux);
                     //Log.i("log","top"+stackList.getTop());
-
                     //Log.i("log","dato ingresado "+aux);
                     //stackList.printl();
-                }
+
               //  stackList.printl();
             }
         });
