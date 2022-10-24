@@ -4,12 +4,12 @@ import android.util.Log;
 
 //PILA. es comun que tengan tamaño fijo ,estático
 public class PilaArreglo {
-    private static final int size=10;//constante
-    private int[] list;
+    private static final int size=50;//constante
+    private char[] list;
     private int top;//guarda la ultima posicion de la lista, es como 'i' en un for
 
     public PilaArreglo() {//CONSTRUCTOR
-        list=new int[size];
+        list=new char[size];
         top=-1;
     }
 
@@ -17,7 +17,7 @@ public class PilaArreglo {
          return top;}
      
      //metodo que no regresa nd, agrega
-     public void push(int data){
+     public void push(char data){
 
         if (isFull()==true) {
             Log.i("log", "the stack is full");
@@ -27,13 +27,13 @@ public class PilaArreglo {
         }
      }
 
-     public int  pop(){ //quitar
-        int aux=-1;
+     public int pop(){ //quitar
+       char aux = 0;
         if(isEmpty()==true){
             Log.i("log","the stack is empty");
         }else{
          aux =list[top];//dato de la lista
-         list[top]=-1;
+         list[top]='c';
          top--;
         }return aux;
     }

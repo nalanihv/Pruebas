@@ -17,7 +17,7 @@ public class Stack {
 
     public void Push(int data){ //paga agregar valores
         StackNode node=new StackNode(data,top);
-        //o top=new StackNode(data,top)
+         //top=new StackNode(data,top);
         top=node;
         if(top==null){ //StarOverflow
             /*en este caso el limite es el espacio en memoria, si  ya esta lleno
@@ -25,6 +25,8 @@ public class Stack {
             * va a ser nulo */
             Log.i("log","stackOverflow");
         }}
+
+
 
     public void  printl(){
         String aux="";
