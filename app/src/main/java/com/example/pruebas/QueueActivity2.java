@@ -3,6 +3,7 @@ package com.example.pruebas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.pruebas.colas.Queue;
 
@@ -19,5 +20,8 @@ public class QueueActivity2 extends AppCompatActivity {
         queue.add(6);
         queue.add(9);
         queue.printl();
+
+        Log.i("log",queue.getFirst()+" ");
+        Log.i("log",queue.getLast()+" ");
     }
 }
