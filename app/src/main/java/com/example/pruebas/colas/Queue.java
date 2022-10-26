@@ -12,6 +12,13 @@ public class Queue { //para usar los datos de esa clase
       //first=last=null  ;
     }
 
+    public QueueNode getFirst() {
+        return first;}
+    public QueueNode getLast() {
+        return last;}
+
+
+
     public void add(int data){
         QueueNode node=new QueueNode(data);//agrega valores
         if (node==null){
