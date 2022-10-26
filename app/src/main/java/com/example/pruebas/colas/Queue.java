@@ -30,9 +30,10 @@ public class Queue { //para usar los datos de esa clase
     public void printl(){
         String result="";
         QueueNode aux=last;
-        while (aux.getNext()!=null){ // aux==last.getNext; sign.
+        while (aux!=null){ // aux==last.getNext; sign.
             result+=last+" -> ";
         }
+        Log.i("log",""+result);
     }
 
 
