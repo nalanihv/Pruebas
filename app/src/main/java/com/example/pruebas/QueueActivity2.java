@@ -21,7 +21,7 @@ public class QueueActivity2 extends AppCompatActivity {
         queue.add(9);
         queue.printl();
 
-        Log.i("log",queue.getFirst()+" ");
-        Log.i("log",queue.getLast()+" ");
+        Log.i("log",queue.getFirst()+"  fist ");
+        Log.i("log",queue.getLast()+"   last ");
     }
 }
