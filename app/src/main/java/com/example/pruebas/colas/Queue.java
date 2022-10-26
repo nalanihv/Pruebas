@@ -24,7 +24,14 @@ public class Queue { //para usar los datos de esa clase
                 //que se actualiza en la siguente linea
             }
             last=node;//el ultimo que llegue es el ultimo
+        }
+    }
 
+    public void printl(){
+        String result="";
+        QueueNode aux=last;
+        while (aux.getNext()!=null){ // aux==last.getNext; sign.
+            result+=last+" -> ";
         }
     }
 
