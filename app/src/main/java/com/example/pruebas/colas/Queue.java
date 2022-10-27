@@ -27,8 +27,8 @@ public class Queue { //para usar los datos de esa clase
             if(first==null){
                 first=node;//el primero siempre va a tener el mismo valor agregando
             }else {
-                node.setNext(last);//el dato que entra se enlaza con el set el enlace para que apunte al ultimo de ese momento , hasta
-                //que se actualiza en la siguente linea
+                last.setNext(node);//el dato que entra se enlaza con el set el enlace para que apunte al ultimo de ese momento , hasta
+                //que se actualiza en la siguente linea. Al ultimo ponerle el que sigue despues de el.
             }
             last=node;//el ultimo que llegue es el ultimo
         }
@@ -36,15 +36,26 @@ public class Queue { //para usar los datos de esa clase
 
     public void printl(){
         String result="";
-        QueueNode aux=last;
+        QueueNode aux=first;
         while (aux!=null){ // aux==last.getNext; sign.
-            result+=last+" -> ";
+            result+=aux+" -> ";
+            aux=aux.getNext();
         }
         Log.i("log",""+result);
     }
 
 
-    public int quit(){
-        return 0;
-    }
-}
+    public int remove(){
+
+        if (first==null){
+            return -1;//no hay elementos
+        }else {
+            QueueNode aux=first;
+            first=first.getNext();
+            if (first==null)
+                last = null;
+
+            return aux.getData();
+
+        }
+    }}
