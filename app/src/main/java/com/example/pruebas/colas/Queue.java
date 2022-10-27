@@ -51,7 +51,7 @@ public class Queue { //para usar los datos de esa clase
             return -1;//no hay elementos
         }else {
             QueueNode aux=first;
-            first=first.getNext();
+            first=first.getNext();//el primero va hacer ahora el enlace que tiene
             if (first==null)
                 last = null;
 

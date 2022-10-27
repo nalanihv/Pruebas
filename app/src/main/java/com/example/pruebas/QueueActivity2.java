@@ -20,6 +20,7 @@ public class QueueActivity2 extends AppCompatActivity {
         queue.add(6);
         queue.add(9);
         queue.printl();
+        queue.remove();
 
         Log.i("log",queue.getFirst()+"  fist ");
         Log.i("log",queue.getLast()+"   last ");
